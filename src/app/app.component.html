@@ -1,0 +1,110 @@
+<div class="container-fluid">
+  <h1 [style.color]="color1" [style.backgroundColor]="color2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Harum, repudiandae.</h1>
+  <a href="#" class="btn btn-success" role="button" (click)="updateColour()">Click To Change Colour</a>
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-primary border rounded-3" [style.backgroundcolor]="color1">
+        <h2>Change the background</h2>
+        <p>
+          Swap the background-color utility and add a `.text-*` color
+          utility to mix up the jumbotron look. Then, mix and match with
+          additional component themes and more.
+        </p>
+        <button class="btn btn-outline-primary" type="button">
+          Example button
+        </button>
+      </div>
+    </div>
+    @if(show){
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-primary border rounded-3">
+        <h2>Add borders</h2>
+        <p>
+          Or, keep it light and add a border for some added definition
+          to the boundaries of your content. Be sure to look under the
+          hood at the source HTML here as we've adjusted the alignment and
+          sizing of both column's content for equal-height.
+        </p>
+        <button class="btn Swap the background-color utility and add a `.text-*` color
+        utility to mix up the jumbotron look. Then, mix and match with
+        additional component themes and more." type="button">
+          Example button
+        </button>
+      </div>
+    </div>
+    }
+    @else {
+    <h2>Value is not given</h2>
+    }
+
+    <div class="container m-4">
+
+      <h2>Angular Directive <span class="badge  bg-warning">*ngFor </span></h2>
+      <ul>
+        <li *ngFor="let i of arr1">{{i}}</li>
+      </ul>
+    </div>
+    <div class="container m-4">
+
+
+
+
+      <div class="table">
+        <table class="table table-primary">
+          <thead>
+            <tr id="headTb">
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Bio</th>
+              <th scope="col">Language</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="" *ngFor="let i of data">
+              <td>{{i.id}}</td>
+              <td scope="row">{{i.name}} </td>
+              <td>{{i.bio}}</td>
+              <td>{{i.language }}</td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div [ngSwitch]="item" class="container m-4">
+    <h1 class="bg-info">Switch Case</h1>
+    <h2 *ngSwitchCase="'bike'">Hello Its a Bike</h2>
+    <h2 *ngSwitchCase="'Car'">Hello Its a Car</h2>
+    <h2 *ngSwitchCase="'Truck'">Hello Its a Truck</h2>
+    <h2 *ngSwitchCase="'Train'">Hello Its a Train</h2>
+    <h2 *ngSwitchCase="'Flight'">Hello Its a Flight</h2>
+  </div>
+  <div class="container-fluid">
+    <h2 class="bg-warning text-secondary"> Custom Directives In Angular</h2>
+    <div class="row align-items-md-stretch">
+
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2 appCustdirective >Add borders</h2>
+          <p appMydirect [style.color]="color3">
+            Or, keep it light and add a border for some added definition
+            to the boundaries of your content. Be sure to look under the
+            hood at the source HTML here as we've adjusted the alignment and
+            sizing of both column's content for equal-height.
+          </p>
+          <button (click)="updateColour()" class="btn btn-outline-primary" type="button">
+            change Color
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

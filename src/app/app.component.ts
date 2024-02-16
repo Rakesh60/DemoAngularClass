@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularClass';
+  subject='Angular Pipes'
   color1='white';
   color2='gray';
   color3='red'

@@ -64,7 +64,7 @@
             <tr class="" *ngFor="let i of data">
               <td>{{i.id}}</td>
               <td scope="row">{{i.name}} </td>
-              <td>{{i.bio}}</td>
+              <td>{{i.bio|slice: 0:20}}</td>
               <td>{{i.language }}</td>
 
             </tr>
@@ -105,6 +105,24 @@
         </div>
       </div>
     </div>
-
+    <h1>Thsi is {{subject|slice: 0:7 |uppercase}}</h1>
+    <h1> this is {{subject|slice: 8 |uppercase}}</h1>
+<div class="container bg-warning">
+  {{data[0]|json|uppercase}}
+  <br>
+ <span class="bg-danger text-white"> {{50|currency: 'USD'}}</span>
+ <span class="bg-danger text-white"> {{50|currency: 'INR'}}</span>
+ <span class="bg-danger text-white"> {{50|currency: 'GBP'}}</span>
+ <div class="container bg-light text-danger m-4">
+  50 USD is Equal: {{50|usdToinr}} INR
+  <br>
+  <span class="bg-danger text-light">
+   The Simple interest of 200 is {{200|siInterest: 5:3}}
+  </span>
+ </div>
+</div>
   </div>
+</div>
+<div class="container">
+  <app-login></app-login>
 </div>
